@@ -1,5 +1,5 @@
 # Mohamed Elaraby 
-### Software Engineering Student | Faculty of Computers & Information
+### Software Engineering Student | Faculty of Computers & Informatics, Suez Canal University 
 
 ---
 
@@ -16,3 +16,5 @@
 
 ### 📬 Contact
 Feel free to connect via LinkedIn or GitHub.
+or e-mail : melaraby692007@gnail.com 
+
