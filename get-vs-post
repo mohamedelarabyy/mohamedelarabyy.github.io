@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الفرق بين GET و POST</title>
+  <style>
+    body { font-family: Tahoma, Arial, sans-serif; background: #f4f6f8; color: #222; margin: 0; line-height: 1.8; }
+    header { background: #2c5282; color: #fff; text-align: center; padding: 24px 12px; }
+    main { max-width: 800px; margin: 0 auto; padding: 16px; }
+    section { background: #fff; border-radius: 10px; padding: 16px; margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+    h2 { color: #2c5282; margin-top: 0; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #ccd; padding: 8px; text-align: center; }
+    th { background: #2c5282; color: #fff; }
+    code { background: #edf2f7; padding: 2px 6px; border-radius: 4px; direction: ltr; display: inline-block; }
+    form { display: flex; flex-direction: column; gap: 8px; }
+    input, button { padding: 8px; font-size: 1rem; }
+    button { background: #2c5282; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+    footer { text-align: center; padding: 16px; color: #666; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>الفرق بين GET و POST</h1>
+    <p>طريقتين لإرسال البيانات من المتصفح للسيرفر في HTTP</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>ما هو GET؟</h2>
+      <p>بيُستخدم لـ <strong>طلب بيانات</strong> من السيرفر (زي فتح صفحة أو البحث). البيانات بتظهر في الـ URL.</p>
+      <p>مثال: <code>search.html?name=ahmed&amp;age=20</code></p>
+    </section>
+
+    <section>
+      <h2>ما هو POST؟</h2>
+      <p>بيُستخدم لـ <strong>إرسال بيانات</strong> للسيرفر (زي تسجيل الدخول أو رفع ملف). البيانات بتتبعت داخل الـ body ومش بتظهر في الـ URL.</p>
+    </section>
+
+    <section>
+      <h2>جدول المقارنة</h2>
+      <div class="table-wrap">
+        <table>
+          <tr><th>وجه المقارنة</th><th>GET</th><th>POST</th></tr>
+          <tr><td>الغرض</td><td>جلب بيانات</td><td>إرسال/تعديل بيانات</td></tr>
+          <tr><td>ظهور البيانات</td><td>في الـ URL</td><td>في الـ body (مخفية)</td></tr>
+          <tr><td>الأمان</td><td>أقل</td><td>أفضل نسبيًا</td></tr>
+          <tr><td>حجم البيانات</td><td>محدود (طول الـ URL)</td><td>كبير تقريبًا بدون حد</td></tr>
+          <tr><td>الـ Bookmark</td><td>ممكن</td><td>مش ممكن</td></tr>
+          <tr><td>الـ Cache</td><td>بيتخزن</td><td>مش بيتخزن عادةً</td></tr>
+          <tr><td>تكرار الطلب</td><td>آمن</td><td>ممكن يكرر العملية</td></tr>
+          <tr><td>مثال</td><td>البحث في جوجل</td><td>تسجيل الدخول</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>مثال عملي في HTML</h2>
+      <p>فورم بـ GET:</p>
+      <code>&lt;form method="get" action="result.html"&gt;</code>
+      <p>فورم بـ POST:</p>
+      <code>&lt;form method="post" action="result.html"&gt;</code>
+
+      <h3>جرّب بنفسك (GET)</h3>
+      <form method="get" action="#">
+        <input type="text" name="username" placeholder="اكتب اسمك">
+        <button type="submit">إرسال بـ GET</button>
+      </form>
+      <p>لاحظ إن اسمك هيظهر في الـ URL فوق بعد الإرسال.</p>
+    </section>
+
+    <section>
+      <h2>الخلاصة</h2>
+      <p>استخدم <strong>GET</strong> لما تطلب بيانات عادية، واستخدم <strong>POST</strong> لما تبعت بيانات حساسة أو بتغيّر حاجة على السيرفر.</p>
+    </section>
+  </main>
+
+  <footer>تم إعداد الصفحة كتكليف في مادة Web Design</footer>
+</body>
+</html>
